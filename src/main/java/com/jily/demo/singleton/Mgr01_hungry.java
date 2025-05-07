@@ -31,6 +31,7 @@ public class Mgr01_hungry {
         //方法1：用hashCode()方法来验证
         for (int i = 0; i < 10; i++) {
             new Thread(()->{
+                //不同对象的hashCode是不同的
                 System.out.println(Mgr01_hungry.getInstance().hashCode());
             }).start();
         }
